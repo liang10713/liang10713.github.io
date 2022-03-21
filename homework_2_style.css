@@ -1,42 +1,66 @@
-.head{
-    margin: auto;
+.header{
     display:flex;
     background-color: black;
     justify-content: flex-end;
 }
-.head nav a{
+.header img{
+    margin-right: 30px;
+}
+.header nav a{
+    margin-right: 10px;
     color: white;
     text-decoration:none;
 }
+
 .grounp{
+    padding: 0px 40px;
     display:flex;
-    background-color:bisque;
+    background-color:#fff;
     align-items: center;
 }
+.grounp img{
+    height: 27px;
+    margin: 20px 0px;
+}
 .grounp nav{
-    width: 100%;
-    text-align: center;
-    background-color: aqua;
+    padding-left: 60px;
 }
 .grounp nav a{
+    padding:10px;
     text-decoration:none;
 }
 .grounp nav .circle{
-    padding: 5px;
+    padding: 10px 20px;
+    margin-left: 300px;
     border-radius: 30%;
     background-color: blue;
     color: white;
 }
+
 .grounp_two{
     display: flex;
-    background-color:gainsboro;
+    background-color:#010c2b;
     align-items: center;
 }
 .grounp_two .col{
     width: 50%;
+    margin: 50px;
+    text-align:left;
+}
+.grounp_two .text{
+    color: white;
+}
+.grounp_two h2{
+    font-size: 30px;
+}
+.grounp_two input{
+    width: 250px;
+    background: unset;
+    border: 1px solid #fff;
+    border-width: 0px 0px 1px;
 }
 .grounp_two .col a{
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 30%;
     background-color: blue;
     color: white;
@@ -46,14 +70,27 @@
 .grounp_two .col img{
     width: 100%;
 }
+
+.grounp_three{
+    text-align: center;
+    margin:50px;
+}
+.grounp_three h2{
+    font-size: 30px;
+}
+.grounp_three p{
+    font-size: 14px;
+}
+
 .grounp_four{
-    width: 960px;
+    width: 1254px;
     margin:auto;
     display: flex;
     align-items: center;
 }
 .grounp_four .col{
     width: 50%;
+    padding: 20px 70px;
 }
 .grounp_four .col .list{
     margin:auto;
@@ -61,18 +98,23 @@
     align-items: center;
 
 }
+.grounp_four a{
+    color:rgb(47, 74, 224);
+    text-decoration: none;
+}
 .grounp_four .col img{
     width: 100%;
 }
 
 .grounp_fives{
-    width: 960px;
+    width: 1254px;
     margin:auto;
     display: flex;
     align-items: center;
 }
 .grounp_fives .col{
     width: 50%;
+    padding: 20px 70px;
 }
 .grounp_fives .col .list{
     margin:auto;
@@ -80,18 +122,23 @@
     align-items: center;
 
 }
+.grounp_fives a{
+    color:rgb(47, 74, 224);
+    text-decoration: none;
+}
 .grounp_fives .col img{
     width: 100%;
 }
 
 .grounp_six{
-    width: 960px;
+    width: 1254px;
     margin:auto;
     display: flex;
     align-items: center;
 }
 .grounp_six .col{
     width: 50%;
+    padding: 20px 70px;
 }
 .grounp_six .col .list{
     margin:auto;
@@ -99,65 +146,86 @@
     align-items: center;
 
 }
+.grounp_six a{
+    color:rgb(47, 74, 224);
+    text-decoration: none;
+}
 .grounp_six .col img{
     width: 100%;
 }
 
 .grounp_seven{
-    width: 960px;
+    width: 1254px;;
     margin:auto;
     align-items: center;
     display: flex;
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
 }
 .grounp_seven .col{
-    width: 100%;
+    width: 50%;
+    padding: 20px 70px;
 }
 .grounp_seven .col .list{
     margin:auto;
     display: flex;
 }
+.grounp_seven a{
+    color:rgb(47, 74, 224);
+    text-decoration: none;
+}
 .grounp_seven .col img{
     width: 100%;
 }
+
 .grounp_eight{
     width: 100%;
     margin:auto;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #f4f5f7;
+}
+.grounp_eight h2{
+    font-size: 30px;
+    padding: 40px 0px 0px 0px;
 }
 .grounp_eight .col{
     display: flex;
     justify-content: center;
 }
-.grounp_eight .col div{
+.grounp_eight .content{
     width: 300px;
-    padding: 20px 10px;
-    text-align: center;
+    padding: 20px 30px;
+    font-size: 15px;
 }
-.grounp_eight .col img{
+.grounp_eight .img_wrap{
+    margin-left: 100px;
+    padding: 10px;
+    width: 100px;
+    background-color: white;
     border-radius: 50%;
 }
 
 .grounp_nine{
-    width: 960px;
+    width: 1254px;
     margin:auto;
 }
 .grounp_nine h2{
+    font-size: 30px;
     text-align: center;
 }
 .grounp_nine .ulist{
-    text-align: center;
+    display: flex;
     padding: 10px 10px;
     /* justify-content: space-around; */
     /* 為何這不行 */
 }
 .grounp_nine img{
-    padding: 20px 40px;
+    width: 130px;
+    padding: 20px 60px;
 }
 
 .grounp_ten{
-    width: 960px;
+    width: 1254px;
+    padding: 0px 0px 50px 0px;
     margin:auto;
     display: flex;
 }
@@ -165,55 +233,79 @@
     padding: 0px 8px;
     width: 50%;
 }
+.grounp_ten .content{
+    margin-bottom: 70px;
+}
 .grounp_ten a{
+    color:rgb(47, 74, 224);
     text-decoration:none;
 }
-/* .grounp_ten .col .text_botton{
-} */
 .grounp_ten .col img{
     width: 100%;
 }
 
 .grounp_eleven{
-    width: 100%;
     margin: auto;
-    background-color:cornflowerblue;
+    display: flex;
+    background-color:rgb(10, 10, 68)
 }
 .grounp_eleven .content{
-    width: 80%;
     margin: auto;
+    color: white;
+}
+.grounp_eleven .text{
+    font-size: 20px;
+}
+.grounp_eleven .thing{
+    display: block;
+    width: 350px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30%;
 }
 .grounp_eleven a{
+    display: block;
+    padding: 10px 100px;
+    font-size:  20px;
+    color: white;
     text-decoration: none;
 }
 
 .grounp_twelve{
-    width: 100%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
-    background-color: bisque;
+    justify-content: center;
+    background-color: #0b1422;
 }
 .grounp_twelve div{
-    width: 175px;
-    background-color: cadetblue;
+    padding: 30px;
+    /* width: 175px; */
+    /* background-color: cadetblue; */
+}
+.grounp_twelve ul{
+    text-align: left;
+    padding: 5px 10px 5px 10px;
 }
 .grounp_twelve h3{
-    background-color: brown;
-    text-align: center;
+    /* background-color: brown; */
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-size: 15px;
 }
 .grounp_twelve a{
+    padding: 10px;
     margin: auto;
-    padding: 6px 10px;
     display: block;
-    text-align: left;
     text-decoration: none;
-    background-color: aquamarine;
+    color: #748094;
+    font-size: 10px;
+    /* background-color: aquamarine; */
 }
 
 .footer{
     background-color: black;
     color: white;
+    padding: 25px;
 }
 .footer .content{
     display: flex;
@@ -230,5 +322,6 @@
 }
 .footer img{
     padding: 10px;
+    border-radius: 50%;
 }
 

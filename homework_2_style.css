@@ -1,0 +1,234 @@
+.head{
+    margin: auto;
+    display:flex;
+    background-color: black;
+    justify-content: flex-end;
+}
+.head nav a{
+    color: white;
+    text-decoration:none;
+}
+.grounp{
+    display:flex;
+    background-color:bisque;
+    align-items: center;
+}
+.grounp nav{
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+}
+.grounp nav a{
+    text-decoration:none;
+}
+.grounp nav .circle{
+    padding: 5px;
+    border-radius: 30%;
+    background-color: blue;
+    color: white;
+}
+.grounp_two{
+    display: flex;
+    background-color:gainsboro;
+    align-items: center;
+}
+.grounp_two .col{
+    width: 50%;
+}
+.grounp_two .col a{
+    padding: 5px;
+    border-radius: 30%;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    
+}
+.grounp_two .col img{
+    width: 100%;
+}
+.grounp_four{
+    width: 960px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+}
+.grounp_four .col{
+    width: 50%;
+}
+.grounp_four .col .list{
+    margin:auto;
+    display: flex;
+    align-items: center;
+
+}
+.grounp_four .col img{
+    width: 100%;
+}
+
+.grounp_fives{
+    width: 960px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+}
+.grounp_fives .col{
+    width: 50%;
+}
+.grounp_fives .col .list{
+    margin:auto;
+    display: flex;
+    align-items: center;
+
+}
+.grounp_fives .col img{
+    width: 100%;
+}
+
+.grounp_six{
+    width: 960px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+}
+.grounp_six .col{
+    width: 50%;
+}
+.grounp_six .col .list{
+    margin:auto;
+    display: flex;
+    align-items: center;
+
+}
+.grounp_six .col img{
+    width: 100%;
+}
+
+.grounp_seven{
+    width: 960px;
+    margin:auto;
+    align-items: center;
+    display: flex;
+    background-color:aquamarine;
+}
+.grounp_seven .col{
+    width: 100%;
+}
+.grounp_seven .col .list{
+    margin:auto;
+    display: flex;
+}
+.grounp_seven .col img{
+    width: 100%;
+}
+.grounp_eight{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+.grounp_eight .col{
+    display: flex;
+    justify-content: center;
+}
+.grounp_eight .col div{
+    width: 300px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.grounp_eight .col img{
+    border-radius: 50%;
+}
+
+.grounp_nine{
+    width: 960px;
+    margin:auto;
+}
+.grounp_nine h2{
+    text-align: center;
+}
+.grounp_nine .ulist{
+    text-align: center;
+    padding: 10px 10px;
+    /* justify-content: space-around; */
+    /* 為何這不行 */
+}
+.grounp_nine img{
+    padding: 20px 40px;
+}
+
+.grounp_ten{
+    width: 960px;
+    margin:auto;
+    display: flex;
+}
+.grounp_ten .col{
+    padding: 0px 8px;
+    width: 50%;
+}
+.grounp_ten a{
+    text-decoration:none;
+}
+/* .grounp_ten .col .text_botton{
+} */
+.grounp_ten .col img{
+    width: 100%;
+}
+
+.grounp_eleven{
+    width: 100%;
+    margin: auto;
+    background-color:cornflowerblue;
+}
+.grounp_eleven .content{
+    width: 80%;
+    margin: auto;
+}
+.grounp_eleven a{
+    text-decoration: none;
+}
+
+.grounp_twelve{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: bisque;
+}
+.grounp_twelve div{
+    width: 175px;
+    background-color: cadetblue;
+}
+.grounp_twelve h3{
+    background-color: brown;
+    text-align: center;
+}
+.grounp_twelve a{
+    margin: auto;
+    padding: 6px 10px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    background-color: aquamarine;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+}
+.footer .content{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer .text{
+    font-size: 10px;
+}
+.footer img{
+    padding: 10px;
+}
+

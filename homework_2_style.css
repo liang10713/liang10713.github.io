@@ -159,7 +159,6 @@
     margin:auto;
     align-items: center;
     display: flex;
-    /* background-color:aquamarine; */
 }
 .grounp_seven .col{
     width: 50%;
@@ -215,8 +214,6 @@
 .grounp_nine .ulist{
     display: flex;
     padding: 10px 10px;
-    /* justify-content: space-around; */
-    /* 為何這不行 */
 }
 .grounp_nine img{
     width: 130px;
@@ -279,15 +276,12 @@
 }
 .grounp_twelve div{
     padding: 30px;
-    /* width: 175px; */
-    /* background-color: cadetblue; */
 }
 .grounp_twelve ul{
     text-align: left;
     padding: 5px 10px 5px 10px;
 }
 .grounp_twelve h3{
-    /* background-color: brown; */
     padding: 5px 10px 5px 10px;
     color: white;
     font-size: 15px;
@@ -299,7 +293,6 @@
     text-decoration: none;
     color: #748094;
     font-size: 10px;
-    /* background-color: aquamarine; */
 }
 
 .footer{

@@ -98,6 +98,7 @@
     margin:auto;
     display: flex;
     align-items: center;
+    list-style: none;
 
 }
 .grounp_four a{

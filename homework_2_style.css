@@ -32,7 +32,7 @@
 .grounp nav .circle{
     padding: 10px 20px;
     margin-left: 300px;
-    border-radius: 30%;
+    border-radius: 30px;
     background-color: blue;
     color: white;
 }
@@ -61,7 +61,7 @@
 }
 .grounp_two .col a{
     padding: 5px 15px;
-    border-radius: 30%;
+    border-radius: 30px;
     background-color: blue;
     color: white;
     text-decoration: none;
@@ -261,7 +261,7 @@
     width: 350px;
     height: 50px;
     background-color: blue;
-    border-radius: 30%;
+    border-radius: 30px;
 }
 .grounp_eleven a{
     display: block;

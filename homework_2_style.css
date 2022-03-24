@@ -14,24 +14,24 @@
     text-decoration:none;
 }
 
-.grounp{
+.head_nav{
     padding: 0px 40px;
     display:flex;
     background-color:#fff;
     align-items: center;
 }
-.grounp img{
+.head_nav img{
     height: 27px;
     margin: 20px 0px;
 }
-.grounp nav{
+.head_nav nav{
     padding-left: 60px;
 }
-.grounp nav a{
+.head_nav nav a{
     padding:10px;
     text-decoration:none;
 }
-.grounp nav .circle{
+.head_nav nav .circle{
     padding: 10px 20px;
     margin-left: 300px;
     border-radius: 30px;

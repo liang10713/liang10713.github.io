@@ -110,11 +110,11 @@
     text-align: center;
     font-size: 20px;
 }
-.introduce .content{
+.introduce_content{
     display: flex;
     margin: auto;
 }
-.introduce .content .col{
+.introduce_content .col{
     width: 50%;
 }
 .introduce .col h2{
@@ -125,7 +125,7 @@
 .introduce .col p{
     font-size: 20px;
 }
-.introduce .content .list{
+.introduce_content .list{
     padding: 10px;
     display: flex;
     margin: auto;
@@ -142,7 +142,7 @@
 .introduce .col img{
     width: 100%;
 }
-.introduce .content:nth-child(odd){
+.introduce_content:nth-child(odd){
     padding: 30px 0px ;
     flex-direction: row-reverse;
 }

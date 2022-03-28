@@ -1,0 +1,218 @@
+.background{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.background_car{
+    position: relative;
+}
+.col{
+    display: flex;
+}
+.background_car .grey_block{
+    width: 400px;
+    height: 200px;
+    background-color:#ccc;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.background_car .picture{
+    margin: auto;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    z-index: 1;
+}
+.background_car .tag{
+    width: 300px;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+}
+.tag .title{
+    background-color: #f00;
+    display: flex;
+}
+.title p{
+    font-size: 80px
+} 
+.title h1{
+    font-size: 40px;
+    margin-top: 25px;
+}
+.introduce{
+    line-height: 30px;
+    padding: 20px;
+}
+.introduce h2{
+    font-size: 20px;
+}
+.introduce p{
+    font-size: 15px;
+}
+.background_car .play{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -10px;
+}
+.background_car .content{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    z-index: 2;
+}
+.content .head{
+    font-weight: bold;
+    color: #f00;
+    background-color: #ccc;
+    display: block;
+}
+.content span{
+    color:#fff;
+    background-color: black;
+}
+.content p{
+    color: black;
+}
+
+
+.background_woman{
+    position: relative;
+    margin-top: 100px;
+}
+.background_woman .grey_block{
+    width: 500px;
+    height: 400px;
+    background-color:#ccc;
+    position: absolute;
+    top: 30px;
+    right: 130px;
+}
+.background_woman .picture{
+    position: relative;
+    top: 80px;
+    left: 10px;
+    z-index: 1;
+}
+.background_woman .tag{
+    width: 300px;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.background_woman .play{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -10px;
+}
+.background_woman .content{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    position: relative;
+    top: 50px;
+    left: 280px;
+    z-index: 2;
+}
+
+
+.background_man{
+    position: relative;
+    margin-top: 100px;
+}
+.background_man .grey_block{
+    width: 400px;
+    height: 200px;
+    background-color:#ccc;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.background_man .picture{
+    margin: auto;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    z-index: 1;
+}
+.background_man .tag{
+    width: 300px;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+}
+.background_man .play{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -10px;
+}
+.background_man .content{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    z-index: 2;
+}
+
+
+.background_btn{
+    position: relative;
+    margin-top: 100px;
+}
+.background_btn .grey_block{
+    width: 500px;
+    height: 400px;
+    background-color:#ccc;
+    position: absolute;
+    top: 30px;
+    right: 130px;
+}
+.background_btn .picture{
+    position: relative;
+    top: 80px;
+    left: 10px;
+    z-index: 1;
+}
+.background_btn .tag{
+    width: 300px;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.background_btn .play{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -10px;
+}
+.background_btn .content{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    position: relative;
+    top: 50px;
+    left: 280px;
+    z-index: 2;
+}

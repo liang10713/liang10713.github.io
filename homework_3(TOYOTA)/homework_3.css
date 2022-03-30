@@ -12,21 +12,6 @@
 .col{
     display: flex;
 }
-.background_car .grey_block{
-    width: 400px;
-    height: 200px;
-    background-color:#ccc;
-    position: absolute;
-    top: 30px;
-    right: 0;
-}
-.background_car .picture{
-    margin: auto;
-    position: relative;
-    top: 80px;
-    left: 60px;
-    z-index: 1;
-}
 .background_car .tag{
     width: 300px;
     color: #fff;
@@ -39,9 +24,10 @@
     display: flex;
 }
 .title p{
-    font-size: 80px
+    font-size: 80px;
+    writing-mode: vertical-lr;
 } 
-.title h1{
+.title h2{
     font-size: 40px;
     margin-top: 25px;
 }
@@ -49,17 +35,36 @@
     line-height: 30px;
     padding: 20px;
 }
-.introduce h2{
+.introduce h3{
     font-size: 20px;
 }
 .introduce p{
     font-size: 15px;
+}
+.background_car .picture{
+    margin: auto;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    z-index: 1;
+    cursor: pointer;
+}
+.background_car .picture::after{
+    content: '';
+    width: 400px;
+    height: 200px;
+    background-color:#ccc;
+    position: absolute;
+    z-index: -1;
+    top: -42px;
+    right: -42px;
 }
 .background_car .play{
     position: absolute;
     z-index: 2;
     top: 50%;
     right: -10px;
+    cursor: pointer;
 }
 .background_car .content{
     width: 600px;
@@ -77,32 +82,34 @@
     background-color: #ccc;
     display: block;
 }
-.content span{
+.content .head::after{
+    content: '';
+    display: inline-block;
+    background-color: #f00;
+    height: 1px;
+    width: 70%;
+    position: relative;
+    top: -5px;
+}
+.content h4{
+    display:inline-block;
     color:#fff;
     background-color: black;
 }
 .content p{
     color: black;
 }
+.content p::before{
+    content:'\f111';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "font awesome 6 free";
+}
 
 
 .background_woman{
     position: relative;
     margin-top: 100px;
-}
-.background_woman .grey_block{
-    width: 500px;
-    height: 400px;
-    background-color:#ccc;
-    position: absolute;
-    top: 30px;
-    right: 130px;
-}
-.background_woman .picture{
-    position: relative;
-    top: 80px;
-    left: 10px;
-    z-index: 1;
 }
 .background_woman .tag{
     width: 300px;
@@ -112,11 +119,29 @@
     right: 0;
     z-index: 2;
 }
+.background_woman .picture{
+    position: relative;
+    top: 80px;
+    left: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.background_woman .picture::after{
+    content: '';
+    width: 500px;
+    height: 300px;
+    background-color:#ccc;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    right: -50px;
+}
 .background_woman .play{
     position: absolute;
     z-index: 2;
     top: 50%;
     left: -10px;
+    cursor: pointer;
 }
 .background_woman .content{
     width: 600px;
@@ -134,21 +159,6 @@
     position: relative;
     margin-top: 100px;
 }
-.background_man .grey_block{
-    width: 400px;
-    height: 200px;
-    background-color:#ccc;
-    position: absolute;
-    top: 30px;
-    right: 0;
-}
-.background_man .picture{
-    margin: auto;
-    position: relative;
-    top: 80px;
-    left: 60px;
-    z-index: 1;
-}
 .background_man .tag{
     width: 300px;
     color: #fff;
@@ -156,11 +166,30 @@
     position: absolute;
     z-index: 2;
 }
+.background_man .picture{
+    margin: auto;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    z-index: 1;
+    cursor: pointer;
+}
+.background_man .picture::after{
+    content: '';
+    width: 400px;
+    height: 200px;
+    background-color:#ccc;
+    position: absolute;
+    z-index: -1;
+    top: -42px;
+    right: -42px;
+}
 .background_man .play{
     position: absolute;
     z-index: 2;
     top: 50%;
     right: -10px;
+    cursor: pointer;
 }
 .background_man .content{
     width: 600px;
@@ -178,20 +207,6 @@
     position: relative;
     margin-top: 100px;
 }
-.background_btn .grey_block{
-    width: 500px;
-    height: 400px;
-    background-color:#ccc;
-    position: absolute;
-    top: 30px;
-    right: 130px;
-}
-.background_btn .picture{
-    position: relative;
-    top: 80px;
-    left: 10px;
-    z-index: 1;
-}
 .background_btn .tag{
     width: 300px;
     color: #fff;
@@ -200,11 +215,29 @@
     right: 0;
     z-index: 2;
 }
+.background_btn .picture{
+    position: relative;
+    top: 80px;
+    left: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.background_btn .picture::after{
+    content: '';
+    width: 500px;
+    height: 300px;
+    background-color:#ccc;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    right: -50px;
+}
 .background_btn .play{
     position: absolute;
     z-index: 2;
     top: 50%;
     left: -10px;
+    cursor: pointer;
 }
 .background_btn .content{
     width: 600px;

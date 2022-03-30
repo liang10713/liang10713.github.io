@@ -1,0 +1,228 @@
+.back{
+    width: 960px;
+    display: grid;
+    margin: auto;
+    grid-template-rows: repeat(110,30px);
+    grid-template-columns: repeat(32,30px);
+}
+.picture_car{
+    width: 690px;
+    height: 430px;
+    grid-area: 4/8/16/28;
+}
+.grey_block_car{
+    width: 420px;
+    height: 210px;
+    background-color:#ccc;
+    grid-area: 2/19/9/33;
+}
+.tag_car{
+    width: 300px;
+    height: 310px;
+    color: #fff;
+}
+.title{
+    height: 90px;
+    background-color: #f00;
+    display: flex;
+}
+.title p{
+    font-size: 80px;
+    writing-mode: vertical-lr;
+} 
+.title h2{
+    font-size: 50px;
+    margin: auto;
+}
+.introduce{
+    line-height: 30px;
+    padding: 20px;
+    background-color: black;
+}
+.introduce h3{
+    font-size: 22px;
+}
+.introduce p{
+    font-size: 18px;
+}
+.play_car{
+    height: 35px;
+    grid-area: 10/30/12/32;
+}
+.content_car{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 5px;
+    grid-area: 17/5/24/25;
+}
+.head{
+    font-weight: bold;
+    color: #f00;
+    background-color: #ccc;
+    display: block;
+}
+.head::after{
+    content: '';
+    display: inline-block;
+    background-color: #f00;
+    height: 1px;
+    width: 70%;
+    position: relative;
+    top: -5px;
+}
+.content_car h4{
+    display: inline-block;
+    color:#fff;
+    background-color: black;
+}
+.content_car p{
+    color: black;
+}
+.content_car p::before{
+    content:'\f111';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "font awesome 6 free";
+}
+
+
+
+
+.grey_block_woman{
+    width: 420px;
+    height: 360px;
+    background-color:#ccc;
+    grid-area: 28/13/40/27;
+}
+.picture_woman{
+    width: 690px;
+    height: 430px;
+    grid-area: 30/2/44/25;
+}
+.tag_woman{
+    width: 300px;
+    height: 310px;
+    color: #fff;
+    grid-area: 27/23/39/33;
+}
+.play_woman{
+    height: 35px;
+    grid-area: 37/1/38/3;
+}
+.content_woman{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    grid-area: 43/12/48/32;
+}
+.content_woman h4{
+    display: inline-block;
+    color:#fff;
+    background-color: black;
+}
+.content_woman p{
+    color: black;
+}
+.content_woman p::before{
+    content:'\f111';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "font awesome 6 free";
+}
+
+
+
+.grey_block_man{
+    width: 420px;
+    height: 210px;
+    background-color:#ccc;
+    grid-area: 55/19/62/33;
+}
+.picture_man{
+    width: 690px;
+    height: 430px;
+    grid-area: 57/8/71/28;
+}
+.tag_man{
+    width: 300px;
+    height: 310px;
+    color: #fff;
+    grid-area: 54/1/66/11;
+}
+.play_man{
+    height: 35px;
+    grid-area: 63/30/64/32;
+}
+.content_man{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 5px;
+    grid-area: 69/5/76/25;
+}
+.content_man h4{
+    display: inline-block;
+    color:#fff;
+    background-color: black;
+}
+.content_man p{
+    color: black;
+}
+.content_man p::before{
+    content:'\f111';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "font awesome 6 free";
+}
+
+
+
+.grey_block_btn{
+    width: 420px;
+    height: 360px;
+    background-color:#ccc;
+    grid-area: 82/13/94/27;
+}
+.picture_btn{
+    width: 690px;
+    height: 430px;
+    grid-area: 84/2/98/25;
+}
+.tag_btn{
+    width: 300px;
+    height: 310px;
+    color: #fff;
+    grid-area: 81/23/93/33;
+}
+.play_btn{
+    height: 35px;
+    grid-area: 90/1/91/3;
+}
+.content_btn{
+    width: 600px;
+    background-color: #ccc;
+    line-height: 25px;
+    padding: 10px;
+    grid-area: 97/12/102/32;
+}
+.content_btn h4{
+    display: inline-block;
+    color:#fff;
+    background-color: black;
+}
+.content_btn p{
+    color: black;
+}
+.content_btn p::before{
+    content:'\f111';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "font awesome 6 free";
+}
+
+
+
+
+

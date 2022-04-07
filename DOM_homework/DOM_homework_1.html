@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .picturestyle{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="introduce_myself">
+        <img id="image_me" src="" alt="">
+        <p id="name"></p>
+        <p id="gmail"></p>
+        <p id="school"></p>
+        <p id="interest"></p>
+    </div>
+
+    <script>
+        let img = document.getElementById("image_me");
+        let p_name = document.getElementById("name");
+        let p_gmail = document.getElementById("gmail");
+        let p_school = document.getElementById("school");
+        let p_interest = document.getElementById("interest");
+
+        const imagel = "https://raw.githubusercontent.com/liang10713/FileStorage/main/%E4%BD%9C%E6%A5%AD%E7%94%A83.png";
+        
+        img.setAttribute("src",imagel);
+        img.setAttribute("alt","大頭貼");
+        img.setAttribute("class","picturestyle");
+
+        let myname = "陳亮羽";
+        let mygmail = "liang10713@gmail.com";
+        let myschool = "中華大學";
+        let myinterest = "看漫畫，動漫";
+        
+        p_name.innerText = `name:${myname}`;
+        p_name.innerText = `gmail:${mygmail}`;
+        p_school.innerText = `school:${myschool}`;
+        p_interest.innerText =`interest:${myinterest}`;
+
+        const imageArray =[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnM_6rffMJeAPtl9vq54uk22NlUSoElxslg&usqp=CAU width=200px height=300px",
+            "https://imgur.dcard.tw/KhFqQirh.jpg width=200px height=300px",
+            "https://img.zfn9.com/07/d8/84ab2360e41f3058561bcafbf37cdba2.jpg width=200px height=200px"
+        ];
+
+        imageArray.forEach((url,index) =>{
+            document.write(`<img src=${url}>`+"<br>");
+        });
+
+
+    </script>
+</body>
+</html>

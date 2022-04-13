@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <script src="https://kit.fontawesome.com/2dbc4e25d3.js" crossorigin="anonymous"></script>
+    <title>Bootstrap</title>
+    <style>
+        footer .list .list-unstyled a{
+            text-decoration: none;
+            color: #000;
+            padding-bottom: 8px ;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar-expand-md這行讓他從768開始換成不是漢堡的 -->
+    <nav class="navbar navbar-expand-md  navbar-dark px-5" style="background-color: #6f42c1;">
+        <div class="container-fluid">
+            <a class="logo navbar-brand p-0 me-2" href="#">
+                <i class="fa-brands fa-bootstrap fs-2 mt-1"></i>            
+            </a>
+            <!-- 漢堡按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav內容 -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- flex-row flex-wrap讓他在漢堡時換行 -->
+                <ul class="navbar-nav flex-row flex-wrap  me-auto mb-2 mb-lg-0 pt-1">
+                    <!-- col-6 col-md-auto排列方式 -->
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link" href="#">Docs</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link" href="#">Examples</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link" href="#">lcons</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link" href="#">Themes</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+                <!-- 讓東西向end方向靠齊 -->
+                <form class="d-flex">
+                    <ul class="navbar-nav flex-row flex-wrap  me-auto mb-2 mb-lg-0 pt-1">
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="navbar-brand" href="#">
+                                <img src="https://picsum.photos/300/200/?random=10" alt="" width="30" height="24">
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="navbar-brand" href="#">
+                                <img src="https://picsum.photos/300/200/?random=10" alt="" width="30" height="24">
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="navbar-brand" href="#">
+                                <img src="https://picsum.photos/300/200/?random=10" alt="" width="30" height="24">
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="navbar-brand" href="#">
+                                <img src="https://picsum.photos/300/200/?random=10" alt="" width="30" height="24">
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+                <button class="btn btn-outline-warning  d-lg-inline-block my-2 my-md-0 ms-md-3 "
+                    type="submit">Download</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div header_container class="row w-100 m-0 justify-content-xl-between px-5">
+            <div class="header_text  col-8  col-xl-6">
+                <h1 class="bd-title mt-5 ">Examples</h1>
+                <p class="bd-lead">Quickly get a project started with any of our examples ranging from using parts of
+                    theframework to custom components and layouts.</p>
+                <div class="bd-btn">
+                    <button type="button" class="btn  btn-lg text-white" style="  background-color: #6f42c1;">Download
+                        examples</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg">Download source code</button>
+                </div>
+            </div>
+    
+            <div class=" pb-2 pt-5 col-5 col-xl-4">
+                <div class="row g-0 p-2 border border-2 w-100" style="box-sizing: border-box;">
+                    <div class="col-4">
+                        <img src="./woman.png" class="img-fluid rounded-start border-0 m-auto " alt="woman.png">
+                    </div>
+                    <div class="col-8 m-auto">
+                        <div class="card-body pt-0" style="font-size: 12px; line-height: 15px;">
+                            <p class="card-text mb-2">This is a wider card with supporting text below.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+
+
+
+    <section class="card_group">
+        <h2 class="bd-title mt-5  mx-5">RTL</h2>
+        <p class="bd-lead  mx-5">Quickly get a project started with any of our examples ranging.</p>
+        <div class="bd-callout bd-callout-warnning mx-5 p-2 border-bottom border-top  border-end"
+            style=" border-left:4px solid #f0ad4e;">
+            <p>
+                The RTL feature is still <strong>experimental</strong> and will probably evolve according to user
+                feedback. Spotted something or have an improvement to suggest? <a href="#">Open an issue</a>, we'd love
+                to get your insights.
+            </p>
+        </div>
+
+        <div class="row m-5">
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <img src="./card_1.png" class="card-img-top mb-3" alt="card_1" width="480" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                        toadditional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <img src="./card_2.png" class="card-img-top mb-3" alt="card_2" width="480" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                        toadditional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <img src="./card_3.png" class="card-img-top mb-3" alt="card_3" width="480" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                        toadditional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <img src="./card_4.png" class="card-img-top mb-3" alt="card_4" width="480" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                        toadditional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <img src="./card_5.png" class="card-img-top mb-3" alt="card_5" width="480" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                        toadditional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section class="Bootstrap_Themes_container">
+        <div class="card text-center py-5 px-5">
+            <div class="card-header bg-white">
+                <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-danger px-2 fs-3">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+            </div>
+            <div class="card-body ">
+                <h5 class=" card-title display-6 fw-normal">Go further with Bootstrap Themes</h5>
+                <p class="card-text mx-5 px-5">Need something more than these examples? Take Bootstrap to the next level with premium themes from the<a
+                    href="#">official Bootstrap Themes marketplace.</a> They’re built as their own extended frameworks,
+                rich with new components and plugins, documentation, and powerful build tools.</p>
+                <button type="button" class="btn btn-outline-primary">Browse themes</button>
+            </div>
+            <div class="card-footer text-muted bg-white">
+                <img src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-themes-collage@2x.png" class="img-fluid px-5"
+                alt="bootstrap_img">
+            </div>
+        </div>
+        <!-- <div class="Bootstrap_Themes_container m-auto text-center">
+            <div class="text-center">
+                <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-danger px-2 fs-3">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+            </div>
+            <h2 class="display-6 fw-normal text-center">Go further with Bootstrap Themes</h2>
+            <p class="text-center mx-5">Need something more than these examples? Take Bootstrap to the next level with premium themes from the<a
+                    href="#">official Bootstrap Themes marketplace.</a> They’re built as their own extended frameworks,
+                rich with new components and plugins, documentation, and powerful build tools.</p>
+                <div class="btn mx-auto">
+                    <button type="button" class="btn btn-outline-primary">Browse themes</button>
+                </div>
+            <img src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-themes-collage@2x.png" class="img-fluid px-5"
+                alt="bootstrap_img">
+        </div> -->
+
+    </section>
+
+    <footer class="m-auto" style="background-color:#f8f9fa;">
+        <div class="container pt-5 pb-5 px-0 m-auto">
+            <div class="row m-0">
+                <div class="text_group col-12 col-lg-4 fs-6 px-5">
+                    <a href="#" class="text-decoration-none text-black ">
+                        <i class="fa-brands fa-bootstrap fs-2 mt-0"></i>                        
+                        <span class="ms-2 my-auto fs-5">Bootstrap</span>
+                    </a>
+                    <div class="text text-black mt-2">
+                        <span class="mt-3">Designed and built with all the love in the world by the <a href="#"
+                                class="text-decoration-none text-black">Bootstrap team</a> with the help of <a href="#"
+                                class="text-decoration-none text-black">our contributors.</a></span>
+
+                        <span class="d-block mt-1">Code licensed <a href="#"
+                                class="text-decoration-none text-black">MIT</a>, docs <a href="#"
+                                class="text-decoration-none text-black">CC BY 3.0.</a></span>
+
+                        <span class="d-block mt-1">Currently v5.1.3.</span>
+                    </div>
+                </div>
+
+                <div class="list col-6 col-lg-2 px-5 ">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="list col-6 col-lg-2 px-5">
+                    <h5>Guides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Getting started</a></li>
+                        <li><a href="#">Starter template</a></li>
+                        <li><a href="#">Webpack</a></li>
+                        <li><a href="#">Parcel</a></li>
+                    </ul>
+                </div>
+                <div class="list col-6 col-lg-2 px-5">
+                    <h5>Projects</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Bootstrap 5</a></li>
+                        <li><a href="#">Bootstrap 4</a></li>
+                        <li><a href="#">Icons</a></li>
+                        <li><a href="#">RFS</a></li>
+                        <li><a href="#">npm starter</a></li>
+                    </ul>
+                </div>
+                <div class="list col-6 col-lg-2 px-5 ">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Issues</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Corporate sponsors</a></li>
+                        <li><a href="#">Open Collective</a></li>
+                        <li><a href="#">Slack</a></li>
+                        <li><a href="#">Stack Overflow</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

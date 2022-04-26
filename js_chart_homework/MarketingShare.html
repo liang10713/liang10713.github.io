@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <canvas id="mkShare"></canvas>
+    <!-- 作業 -->
+    <table class="table table-bordered table-striped">
+    </table>
+
+    <!-- 圖形格式 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"
+        integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        //作圖資料
+        const marketingShare = {
+            version:"v1.0",
+            publish:"2021/12/31",
+            titles: ['排名', '公司', '國別', '市佔率'],
+            data: [
+                { Raning: 1, Name: "台積電", Country: "台灣", Ratio: 53.1 },
+                { Raning: 2, Name: "三星電子", Country: "韓國", Ratio: 17.3 },
+                { Raning: 3, Name: "聯電", Country: "台灣", Ratio: 7.2 },
+                { Raning: 4, Name: "格羅方德", Country: "美國", Ratio: 6.1 },
+                { Raning: 5, Name: "中芯國際", Country: "中國", Ratio: 5.3 },
+                { Raning: 6, Name: "華虹半導體", Country: "中國", Ratio: 2.6 },
+                { Raning: 7, Name: "力積電", Country: "台灣", Ratio: 1.8 },
+                { Raning: 8, Name: "世界先進", Country: "台灣", Ratio: 1.4 },
+                { Raning: 9, Name: "高塔半導體", Country: "以色列", Ratio: 1.4 },
+                { Raning: 10, Name: "東部高科", Country: "南韓", Ratio: 1 },
+            ]
+
+        };
+        let companies = [], data = [];
+        let top3
+
+        // let companies = ["台積電", "三星電子", "聯電", "格羅方德", "中芯國際", "華虹半導體","力積電", "世界先進", "高塔半導體", "東部高科"];
+        // let data = [53.1, 17.3, 7.2, 6.1, 5.3, 2.6, 1.8,  1.4, 1.4, 1 ];
+
+        window.onload = function () {
+
+            // marketingShare.data.forEach(company =>{
+            //     companies.push(company.Name);
+            //     data.push(company.Ratio);
+
+            //     // let ratio = company.Ratio
+            //     // companies.push(name);
+            //     // data.push(ratio)
+            //     // console.log(data);
+
+
+            // })
+
+            for (var idx in marketingShare.data){
+                companies[idx] = marketingShare.data[idx].Name;
+                data[idx] = marketingShare.data[idx].Ratio;
+            }
+
+            for (let i=0;i<marketingShare.data.length;i++){
+                companies[i] = marketingShare.data[i].Name;
+                data[i] = marketingShare.data[i].Ratio;
+            }
+
+            drawPieChart(companies, data);
+            createTable();
+
+            top3 = marketingShare.data.filter(x=>x.Ratio>7 && x.Country === "台灣" );
+        }
+    </script>
+
+    <script>
+        //作圖
+        //第一個參數為公司陣列, 第二個參數為資料陣列
+        function drawPieChart(companyArray, dataArray) {
+            //Pie Chart圓餅圖
+            let ctxPie = document.getElementById("mkShare");
+            var pieChart = new Chart(ctxPie, {
+                type: 'pie',
+                data: {
+                    labels: companyArray,
+                    datasets: [{
+                        data: dataArray,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(255,75,50)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)',
+                            'rgb(201, 203, 207)',
+                            'rgb(255, 138, 64)',
+                            'rgb(142, 65, 64)',
+                            'rgb(59, 72, 64)'
+                        ]
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        fontSize: 26,
+                        text: '2021年全球晶圓代工市佔率%'
+                    },
+                    tooltips: {
+                        mode: 'point',
+                        intersect: true,
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor: 'black',
+                        }
+                    }
+                }
+            });
+        }
+
+        function createTable() {
+        //     <!-- <thead>
+        //     <tr>
+        //         <th>排名</th>
+        //         <th>公司名稱</th>
+        //         <th>國別</th>
+        //         <th>市佔率</th>
+        //     </tr>
+        // </thead>
+
+        // <tbody>
+        //     <tr>
+        //         <td>1</td>
+        //         <td>台積電</td>
+        //         <td>台灣</td>
+        //         <td>53.1%</td>
+        //     </tr>
+        // </tbody> -->
+
+            let table = document.querySelector('.table')
+            let thead = document.createElement('thead');
+            let thead_tr = document.createElement('tr')
+            marketingShare.titles.forEach(title =>{
+                let thead_th = document.createElement('th');
+                thead_th.innerText = title;
+                thead_tr.appendChild(thead_th)
+            });
+            thead.appendChild(thead_tr);
+            table.appendChild(thead)
+
+            let tbody = document.createElement('tbody');
+            marketingShare.data.forEach(item=>{
+                let tbody_tr = document.createElement('tr')
+                let valueArray = Object.values(item);//Object.values(item)裡的這個(item)要記得ㄚㄚㄚㄚ
+                valueArray.forEach(value=>{
+                    let td = document.createElement('td')
+                    td.innerText = value
+                    tbody_tr.appendChild(td)
+                });
+                tbody.appendChild(tbody_tr)
+            })
+            table.appendChild(tbody)
+        }
+
+    </script>
+</body>
+
+</html>

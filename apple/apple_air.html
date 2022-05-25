@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./APPLE.CSS">
+
+
+    <title>APPLE</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-black">
+        <div class="container-fluid ">
+            <a class="navbar-brand  text-white" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-auto flex-grow-0" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning text-white" type="submit" id="iphon">iPad</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning text-white" type="submit" id="ipad">iPad Air</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning text-white" type="submit" id="macpro">iPad mini</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row d-flex">
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // [
+        //     { "id":"A001", "color": "太空灰色",  "price": 17900, "storage":"64GB", "network": "Wi-Fi", "picture":"gray.png" },
+        //     { "id":"A002", "color": "粉紅色",  "price": 17900, "storage":"64GB", "network": "Wi-Fi", "picture":"pink.png" },
+        //     { "id":"A003", "color": "紫色",  "price": 17900, "storage":"64GB", "network": "Wi-Fi", "picture":"purple.png" },
+        //     { "id":"A004", "color": "藍色",  "price": 17900, "storage":"64GB", "network": "Wi-Fi", "picture":"blue.png" },
+        //     { "id":"A005", "color": "星光色",  "price": 17900, "storage":"64GB", "network": "Wi-Fi", "picture":"starlight.png" },
+        //     { "id":"B001", "color": "太空灰色",  "price": 22900, "storage":"256GB", "network": "Wi-Fi", "picture":"gray.png" },
+        //     { "id":"B002", "color": "粉紅色",  "price": 22900, "storage":"256GB", "network": "Wi-Fi", "picture":"pink.png" },
+        //     { "id":"B003", "color": "紫色",  "price": 22900, "storage":"256GB", "network": "Wi-Fi", "picture":"purple.png" },
+        //     { "id":"B004", "color": "藍色",  "price": 22900, "storage":"256GB", "network": "Wi-Fi", "picture":"blue.png" },
+        //     { "id":"B005", "color": "星光色",  "price": 22900, "storage":"256GB", "network": "Wi-Fi", "picture":"starlight.png" },
+        //     { "id":"C001", "color": "太空灰色",  "price": 22900, "storage":"64GB", "network": "Cellular", "picture":"gray.png" },
+        //     { "id":"C002", "color": "粉紅色",  "price": 22900, "storage":"64GB", "network": "Cellular", "picture":"pink.png" },
+        //     { "id":"C003", "color": "紫色",  "price": 22900, "storage":"64GB", "network": "Cellular", "picture":"purple.png" },
+        //     { "id":"C004", "color": "藍色",  "price": 22900, "storage":"64GB", "network": "Cellular", "picture":"blue.png" },
+        //     { "id":"C005", "color": "星光色",  "price": 22900, "storage":"64GB", "network": "Cellular", "picture":"starlight.png" },
+        //     { "id":"D001", "color": "太空灰色",  "price": 27900, "storage":"256GB", "network": "Cellular", "picture":"gray.png" },
+        //     { "id":"D002", "color": "粉紅色",  "price": 27900, "storage":"256GB", "network": "Cellular", "picture":"pink.png" },
+        //     { "id":"D003", "color": "紫色",  "price": 27900, "storage":"256GB", "network": "Cellular", "picture":"purple.png" },
+        //     { "id":"D004", "color": "藍色",  "price": 27900, "storage":"256GB", "network": "Cellular", "picture":"blue.png" },
+        //     { "id":"D005", "color": "星光色",  "price": 27900, "storage":"256GB", "network": "Cellular", "picture":"starlight.png" }
+        // ]
+        // let colorArray = [{"colorname":"太空灰色","colorimg":"gray.png"},{"colorname":"粉紅色","colorimg":"pink.png"},{"colorname":"紫色","colorimg":"purple.png"},{"colorname":"藍色","colorimg":"blue.png"},{"colorname":"星光色","colorimg":"starlight.png"}]
+        let Air_storageArray = ["64GB", "256GB"]
+        let Air_networkArray = ["Wi-Fi", "Cellular"]
+        const url = "https://raw.githubusercontent.com/liang10713/FileStorage/main/apple_air.json"
+
+        let btn_iphone, btn_ipad, btn_macpro, row, container, ipadArray, div_select, img
+        let color, storage, network
+
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            ipadArray = this.response;
+        }
+        xhr.open("GET", url);
+        xhr.responseType = "json"
+        xhr.send();
+
+
+        window.onload = function () {
+            btn_iphone = document.getElementById("iphon")
+            btn_ipad = document.getElementById("ipad")
+            btn_macpro = document.getElementById("macpro")
+            row = document.querySelector(".row")
+            container = document.querySelector(".container")
+
+            btn_ipad.addEventListener("click", () => {
+
+                creatipad();
+
+            })
+
+
+            function creatipad() {
+                row.innerText = ""
+                // color = ""
+                // storage = ""
+                // network = ""
+
+                //左
+                let div_img = document.createElement("div")
+                div_img.setAttribute("Class", "col-6 div_bigimg")
+                img = document.createElement("img")
+                img.setAttribute("src", "./ipad-air-select.jpeg")
+                img.setAttribute("Class", "w-100")
+                div_img.appendChild(img)
+                row.appendChild(div_img)
+
+
+                //右
+                div_select = document.createElement("div")
+                div_select.setAttribute("Class", "col-6 div_select")
+
+                let div_color = document.createElement("div")
+                div_color.setAttribute("Class", "div_color")
+
+                let div_Storage = document.createElement("div")
+                div_Storage.setAttribute("Class", "div_Storage")
+
+                let div_Connectivity = document.createElement("div")
+                div_Connectivity.setAttribute("Class", "div_Connectivity")
+
+                let div_color_title = document.createElement("h2")
+                div_color_title.innerText = "外觀"
+                div_color.appendChild(div_color_title)
+
+                //迴圈內的變數要在裡面宣告才能對裡面的變數作個別變化
+                let i
+                for (i = 0; i < 5; i++) {//最後會變5，這樣才能判斷i<5是否正確
+                    let btn_color = document.createElement("button")
+                    btn_color.setAttribute("Class", "col-6")
+                    let color_img = document.createElement("img")
+                    color_img.setAttribute("src", ipadArray[i].picture)
+                    color_img.setAttribute("Class", "w-100")
+                    let color_text = document.createElement("p")
+                    color_text.innerText = ipadArray[i].color
+                    btn_color.appendChild(color_img)
+                    btn_color.appendChild(color_text)
+                    div_color.appendChild(btn_color)
+                    changeipadair(btn_color, i);//下面有放變數名稱這裡也要放值(有值的變數名稱，這樣下面的方法的區域變數才會有值
+
+                }
+
+
+                let div_Storage_title = document.createElement("h2")
+                div_Storage_title.innerText = "儲存空間"
+                div_Storage.appendChild(div_Storage_title)
+
+                let laststorage = ""
+                for (let i = 0; i < 2; i++) {
+                    let btn_Storage = document.createElement("button")
+                    btn_Storage.setAttribute("Class", "col-4")
+                    let Storage_text = document.createElement("p")
+                    Storage_text.innerText = Air_storageArray[i]
+                    Storage_text.setAttribute("Class", "mt-0")
+                    btn_Storage.appendChild(Storage_text)
+                    div_Storage.appendChild(btn_Storage)
+
+                    btn_Storage.addEventListener("click", (e) => {
+                        storage = Air_storageArray[i]
+                        console.log(laststorage)
+                        console.log(e.target)
+
+                        if (laststorage == "") {
+                            btn_Storage.classList.add("btn-info")
+                            laststorage = e.target
+                        }
+                        else if (e.target != laststorage) {
+                            laststorage.classList.remove("btn-info")
+                            // btn_Storage.classList.remove("btn-info")
+                            btn_Storage.classList.add("btn-info")
+                            laststorage = e.target
+                        }
+                        console.log(laststorage)
+                        console.log(storage)
+
+
+                        money()
+                    })
+                }
+
+                let div_Connectivity_title = document.createElement("h2")
+                div_Connectivity_title.innerText = "網路"
+                div_Connectivity.appendChild(div_Connectivity_title)
+
+                for (let i = 0; i < 2; i++) {
+                    let btn_Connectivity = document.createElement("button")
+                    btn_Connectivity.setAttribute("Class", "col-4 ")
+                    let Connectivity_text = document.createElement("p")
+                    Connectivity_text.innerText = Air_networkArray[i]
+                    btn_Connectivity.appendChild(Connectivity_text)
+                    div_Connectivity.appendChild(btn_Connectivity)
+
+
+                    btn_Connectivity.addEventListener("click", (e) => {
+                        network = Air_networkArray[i]
+                        money()
+
+                    })
+
+                }
+
+                div_select.append(div_color, div_Storage, div_Connectivity)
+                row.appendChild(div_select)
+
+            }
+
+
+
+            function changeipadair(btn_color, i) {//這裡有變數名稱會變屬於這方法的區域變數(如果這方法()裡沒寫任何的變數下面有變數的話，就會去全域找有沒有相同變數名的變數)，還有(如果這方法()裡有寫任何的變數，就只會去找上面呼叫這方法裡的()裡是否有變數，不管變數名稱是否相同)
+                let lastcolor = ""
+                btn_color.addEventListener("click", (e) => {
+                    // console.log(i)
+                    // console.log(typeof(i))
+                    // console.log(ipadArray[i].color)
+                    if (i == 0) {
+                        img.setAttribute("src", "./ipad-air-spacegray.png")
+
+                    }
+                    else if (i == 1) {
+                        img.setAttribute("src", "./ipad-air-pink.png")
+                    }
+                    else if (i == 2) {
+                        img.setAttribute("src", "./ipad-air-purple.png")
+                    }
+                    else if (i == 3) {
+                        img.setAttribute("src", "./ipad-air-blue.png")
+                    }
+                    else if (i == 4) {
+                        img.setAttribute("src", "./ipad-air-starlight.png")
+                    }
+                    color = ipadArray[i].color
+                    btn_color.classList.add("btn-info")
+
+                    console.log(lastcolor)
+                    console.log(e.target)
+
+                    if (lastcolor == "") {
+                        btn_color.classList.add("btn-info")
+                        lastcolor = e.target
+                    }
+                    else if (e.target != lastcolor) {
+                        // lastcolor.classList.remove("btn-info")
+                        btn_color.classList.remove("btn-info")
+                        btn_color.classList.add("btn-info")
+                        lastcolor = e.target
+                    }
+                    console.log(lastcolor)
+                    console.log(e.target)
+
+                    money()
+                })
+            }
+
+            let money_p = document.createElement("p")
+            money_p.setAttribute("Class", "money_p")
+            function money() {
+                ipad = ipadArray.filter(x => x.color == color && x.storage == storage && x.network == network)
+                money_p.innerText = `顏色:${ipad[0].color}\n容量:${ipad[0].storage}\n網路:${ipad[0].network}\n價錢:${ipad[0].price}`
+                div_select.append(money_p)
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
